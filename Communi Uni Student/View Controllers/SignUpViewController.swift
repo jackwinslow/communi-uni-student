@@ -207,8 +207,10 @@ class SignUpViewController: UIViewController {
                     }
                     
                     // Save user data locally
+                    self.userDefault.set(school!, forKey: "userSchool")
                     self.userDefault.set(email, forKey: "userEmail")
                     self.userDefault.set(password, forKey: "userPassword")
+                    self.userDefault.synchronize()
                     
                     // Transition to the home screen
                     self.transitionToHome()

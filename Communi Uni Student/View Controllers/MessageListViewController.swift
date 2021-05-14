@@ -10,6 +10,9 @@ import UIKit
 class MessageListViewController: UIViewController {
     @IBOutlet weak var studentTableView: UITableView!
     
+    let userDefault = UserDefaults.standard
+    let school = UserDefaults.standard.string(forKey: "school")
+    
     var conversations: Conversations!
     
     override func viewDidLoad() {
@@ -21,7 +24,7 @@ class MessageListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        conversations.loadData {
+        conversations.loadData(school: school!) {
             self.studentTableView.reloadData()
         }
     }
