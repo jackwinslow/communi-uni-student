@@ -3,27 +3,59 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF4C24409478E6D74A2320DB /* Pods_Communi_Uni_Student.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC2A4FB968C9EA72F41C08D /* Pods_Communi_Uni_Student.framework */; };
+		CABD23C7264E2D2900061309 /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23C6264E2D2900061309 /* MessageListViewController.swift */; };
+		CABD23CA264E2D5F00061309 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23C9264E2D5F00061309 /* Conversation.swift */; };
+		CABD23CC264E2D6B00061309 /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23CB264E2D6B00061309 /* Conversations.swift */; };
+		CABD23CF264E2DDD00061309 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23CE264E2DDD00061309 /* Chat.swift */; };
+		CABD23D1264E2DE400061309 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23D0264E2DE400061309 /* Message.swift */; };
+		CABD23D3264E2E2200061309 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23D2264E2E2200061309 /* ChatViewController.swift */; };
+		CABD23D5264E2F4C00061309 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23D4264E2F4C00061309 /* ProfileViewController.swift */; };
+		CABD23D8264E2FF500061309 /* MessageListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23D7264E2FF500061309 /* MessageListTableViewCell.swift */; };
 		CAEF7758264DFCBB0011C1B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF7757264DFCBB0011C1B6 /* AppDelegate.swift */; };
 		CAEF775A264DFCBB0011C1B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF7759264DFCBB0011C1B6 /* SceneDelegate.swift */; };
-		CAEF775C264DFCBB0011C1B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF775B264DFCBB0011C1B6 /* ViewController.swift */; };
+		CAEF775C264DFCBB0011C1B6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF775B264DFCBB0011C1B6 /* WelcomeViewController.swift */; };
 		CAEF775F264DFCBB0011C1B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEF775D264DFCBB0011C1B6 /* Main.storyboard */; };
 		CAEF7761264DFCBD0011C1B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAEF7760264DFCBD0011C1B6 /* Assets.xcassets */; };
 		CAEF7764264DFCBD0011C1B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAEF7762264DFCBD0011C1B6 /* LaunchScreen.storyboard */; };
+		CAEF776C264DFD090011C1B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAEF776B264DFD090011C1B6 /* GoogleService-Info.plist */; };
+		CAEF7770264E01780011C1B6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF776F264E01780011C1B6 /* Utilities.swift */; };
+		CAEF7772264E01930011C1B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF7771264E01930011C1B6 /* Constants.swift */; };
+		CAEF7774264E02160011C1B6 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF7773264E02160011C1B6 /* HomeTabBarController.swift */; };
+		CAEF7776264E024F0011C1B6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF7775264E024F0011C1B6 /* SignUpViewController.swift */; };
+		CAEF7778264E02660011C1B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF7777264E02660011C1B6 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BC2A4FB968C9EA72F41C08D /* Pods_Communi_Uni_Student.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Communi_Uni_Student.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4D44E1D999AF77F0879F144 /* Pods-Communi Uni Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Communi Uni Student.debug.xcconfig"; path = "Target Support Files/Pods-Communi Uni Student/Pods-Communi Uni Student.debug.xcconfig"; sourceTree = "<group>"; };
+		C8BAA0505A5F11D3E08B6616 /* Pods-Communi Uni Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Communi Uni Student.release.xcconfig"; path = "Target Support Files/Pods-Communi Uni Student/Pods-Communi Uni Student.release.xcconfig"; sourceTree = "<group>"; };
+		CABD23C6264E2D2900061309 /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
+		CABD23C9264E2D5F00061309 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		CABD23CB264E2D6B00061309 /* Conversations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversations.swift; sourceTree = "<group>"; };
+		CABD23CE264E2DDD00061309 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		CABD23D0264E2DE400061309 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		CABD23D2264E2E2200061309 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		CABD23D4264E2F4C00061309 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CABD23D7264E2FF500061309 /* MessageListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableViewCell.swift; sourceTree = "<group>"; };
 		CAEF7754264DFCBB0011C1B6 /* Communi Uni Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Communi Uni Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEF7757264DFCBB0011C1B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAEF7759264DFCBB0011C1B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CAEF775B264DFCBB0011C1B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAEF775B264DFCBB0011C1B6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CAEF775E264DFCBB0011C1B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAEF7760264DFCBD0011C1B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAEF7763264DFCBD0011C1B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAEF7765264DFCBD0011C1B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAEF776B264DFD090011C1B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CAEF776F264E01780011C1B6 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CAEF7771264E01930011C1B6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CAEF7773264E02160011C1B6 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		CAEF7775264E024F0011C1B6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CAEF7777264E02660011C1B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +63,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4C24409478E6D74A2320DB /* Pods_Communi_Uni_Student.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAFC834FE6FBF3124A70AA06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4D44E1D999AF77F0879F144 /* Pods-Communi Uni Student.debug.xcconfig */,
+				C8BAA0505A5F11D3E08B6616 /* Pods-Communi Uni Student.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BBB11486AE558C2076CAA8D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BC2A4FB968C9EA72F41C08D /* Pods_Communi_Uni_Student.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CABD23C8264E2D3F00061309 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CABD23C9264E2D5F00061309 /* Conversation.swift */,
+				CABD23CB264E2D6B00061309 /* Conversations.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CABD23CD264E2DBF00061309 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				CABD23CE264E2DDD00061309 /* Chat.swift */,
+				CABD23D0264E2DE400061309 /* Message.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		CABD23D6264E2FCC00061309 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CABD23D7264E2FF500061309 /* MessageListTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		CAEF774B264DFCBB0011C1B6 = {
 			isa = PBXGroup;
 			children = (
 				CAEF7756264DFCBB0011C1B6 /* Communi Uni Student */,
 				CAEF7755264DFCBB0011C1B6 /* Products */,
+				BAFC834FE6FBF3124A70AA06 /* Pods */,
+				BBB11486AE558C2076CAA8D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +136,41 @@
 			children = (
 				CAEF7757264DFCBB0011C1B6 /* AppDelegate.swift */,
 				CAEF7759264DFCBB0011C1B6 /* SceneDelegate.swift */,
-				CAEF775B264DFCBB0011C1B6 /* ViewController.swift */,
+				CAEF776E264E01510011C1B6 /* Helpers */,
+				CABD23C8264E2D3F00061309 /* Models */,
+				CABD23CD264E2DBF00061309 /* Messages */,
+				CAEF776D264E01380011C1B6 /* View Controllers */,
+				CABD23D6264E2FCC00061309 /* Cells */,
+				CAEF7773264E02160011C1B6 /* HomeTabBarController.swift */,
 				CAEF775D264DFCBB0011C1B6 /* Main.storyboard */,
 				CAEF7760264DFCBD0011C1B6 /* Assets.xcassets */,
 				CAEF7762264DFCBD0011C1B6 /* LaunchScreen.storyboard */,
 				CAEF7765264DFCBD0011C1B6 /* Info.plist */,
+				CAEF776B264DFD090011C1B6 /* GoogleService-Info.plist */,
 			);
 			path = "Communi Uni Student";
+			sourceTree = "<group>";
+		};
+		CAEF776D264E01380011C1B6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAEF775B264DFCBB0011C1B6 /* WelcomeViewController.swift */,
+				CAEF7775264E024F0011C1B6 /* SignUpViewController.swift */,
+				CAEF7777264E02660011C1B6 /* LoginViewController.swift */,
+				CABD23C6264E2D2900061309 /* MessageListViewController.swift */,
+				CABD23D2264E2E2200061309 /* ChatViewController.swift */,
+				CABD23D4264E2F4C00061309 /* ProfileViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CAEF776E264E01510011C1B6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CAEF776F264E01780011C1B6 /* Utilities.swift */,
+				CAEF7771264E01930011C1B6 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAEF7768264DFCBD0011C1B6 /* Build configuration list for PBXNativeTarget "Communi Uni Student" */;
 			buildPhases = (
+				2FF988D504B537665E0A04E9 /* [CP] Check Pods Manifest.lock */,
 				CAEF7750264DFCBB0011C1B6 /* Sources */,
 				CAEF7751264DFCBB0011C1B6 /* Frameworks */,
 				CAEF7752264DFCBB0011C1B6 /* Resources */,
+				41AFCF7CACE0543151C6AE62 /* [CP] Embed Pods Frameworks */,
+				2E7B63A85B03B0042C170BB2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAEF7764264DFCBD0011C1B6 /* LaunchScreen.storyboard in Resources */,
+				CAEF776C264DFD090011C1B6 /* GoogleService-Info.plist in Resources */,
 				CAEF7761264DFCBD0011C1B6 /* Assets.xcassets in Resources */,
 				CAEF775F264DFCBB0011C1B6 /* Main.storyboard in Resources */,
 			);
@@ -132,13 +242,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E7B63A85B03B0042C170BB2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Communi Uni Student/Pods-Communi Uni Student-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Communi Uni Student/Pods-Communi Uni Student-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Communi Uni Student/Pods-Communi Uni Student-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FF988D504B537665E0A04E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Communi Uni Student-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41AFCF7CACE0543151C6AE62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Communi Uni Student/Pods-Communi Uni Student-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Communi Uni Student/Pods-Communi Uni Student-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Communi Uni Student/Pods-Communi Uni Student-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CAEF7750264DFCBB0011C1B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAEF775C264DFCBB0011C1B6 /* ViewController.swift in Sources */,
+				CABD23CC264E2D6B00061309 /* Conversations.swift in Sources */,
+				CABD23CF264E2DDD00061309 /* Chat.swift in Sources */,
+				CAEF7772264E01930011C1B6 /* Constants.swift in Sources */,
+				CAEF7776264E024F0011C1B6 /* SignUpViewController.swift in Sources */,
+				CAEF775C264DFCBB0011C1B6 /* WelcomeViewController.swift in Sources */,
+				CAEF7774264E02160011C1B6 /* HomeTabBarController.swift in Sources */,
+				CAEF7778264E02660011C1B6 /* LoginViewController.swift in Sources */,
 				CAEF7758264DFCBB0011C1B6 /* AppDelegate.swift in Sources */,
+				CAEF7770264E01780011C1B6 /* Utilities.swift in Sources */,
+				CABD23D1264E2DE400061309 /* Message.swift in Sources */,
+				CABD23D3264E2E2200061309 /* ChatViewController.swift in Sources */,
+				CABD23C7264E2D2900061309 /* MessageListViewController.swift in Sources */,
+				CABD23D5264E2F4C00061309 /* ProfileViewController.swift in Sources */,
+				CABD23D8264E2FF500061309 /* MessageListTableViewCell.swift in Sources */,
+				CABD23CA264E2D5F00061309 /* Conversation.swift in Sources */,
 				CAEF775A264DFCBB0011C1B6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +465,7 @@
 		};
 		CAEF7769264DFCBD0011C1B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4D44E1D999AF77F0879F144 /* Pods-Communi Uni Student.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +485,7 @@
 		};
 		CAEF776A264DFCBD0011C1B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8BAA0505A5F11D3E08B6616 /* Pods-Communi Uni Student.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
