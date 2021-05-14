@@ -446,12 +446,24 @@
                                 <color key="textColor" name="PrimaryColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhf-6x-ZQP">
+                                <rect key="frame" x="20" y="56" width="62" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" name="PrimaryColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="studentSignOutButtonPressed:" destination="cEK-AU-qy9" eventType="touchUpInside" id="8zX-Xn-fvP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mag-Cd-VcQ"/>
                         <color key="backgroundColor" name="ThirdColor"/>
                         <constraints>
                             <constraint firstItem="mag-Cd-VcQ" firstAttribute="trailing" secondItem="nja-tG-V3v" secondAttribute="trailing" constant="20" id="DhN-pE-1Kt"/>
+                            <constraint firstItem="Lhf-6x-ZQP" firstAttribute="leading" secondItem="mag-Cd-VcQ" secondAttribute="leading" constant="20" id="ZfG-m1-EYD"/>
                             <constraint firstItem="nja-tG-V3v" firstAttribute="top" secondItem="mag-Cd-VcQ" secondAttribute="top" constant="12" id="eDt-eC-rfO"/>
+                            <constraint firstItem="Lhf-6x-ZQP" firstAttribute="top" secondItem="mag-Cd-VcQ" secondAttribute="top" constant="12" id="uvD-Fe-ABl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DBH-Jc-T47"/>

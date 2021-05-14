@@ -19,6 +19,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var studentEmailTextField: UITextField!
     @IBOutlet weak var studentBackButton: UIButton!
     
+    var db = Firestore.firestore()
+    var studentCount = 0
+    var location = ""
+    
     
     
     // setup for dropdown selector
@@ -128,6 +132,20 @@ class SignUpViewController: UIViewController {
 
     }
     
+    func loadSchoolData(collegeName: String,completed: @escaping () -> ()) {
+        db.collection("schools").document(collegeName).getDocument { document, error in
+            if let document = document, document.exists {
+                let school = School(dictionary: document.data()!)
+                school.documentID = document.documentID
+                self.studentCount = school.studentCount
+                self.location = school.location
+            } else {
+                print("Document does not exist")
+            }
+            completed()
+        }
+    }
+    
     // setup for dropdown selector
     @objc func removeTransparentView() {
         let frames = selectedButton.frame
@@ -172,7 +190,7 @@ class SignUpViewController: UIViewController {
                     let db = Firestore.firestore()
                     
                     // Save student in schools collection
-                    db.collection("schools").document(school!).collection("students").document().setData(["firstname": firstName, "lastname": lastName, "school": school!, "uid": result!.user.uid]) { error in
+                    db.collection("schools").document(school!).collection("students").document().setData(["firstname": firstName, "lastname": lastName, "school": school!, "date": Date().timeIntervalSince1970, "uid": result!.user.uid]) { error in
                         
                         if error != nil {
                             
@@ -180,6 +198,12 @@ class SignUpViewController: UIViewController {
                             self.showError("Error saving user data")
                             
                         }
+                    }
+                    
+                    // Increment studentCount in school document in firebase
+                    self.loadSchoolData(collegeName: school!) {
+                        let count = self.studentCount + 1
+                        db.collection("schools").document(school!).setData(["name" : "\(school!)", "location" : self.location, "studentCount" : count])
                     }
                     
                     // Save user data locally
