@@ -72,7 +72,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="g8V-5P-NVw">
-                                <rect key="frame" x="40" y="84" width="334" height="300.5"/>
+                                <rect key="frame" x="40" y="84" width="334" height="370.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTV-Ld-fsm">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -87,14 +87,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56c-gc-A8f">
+                                        <rect key="frame" x="0.0" y="140" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Select College/University"/>
+                                        <connections>
+                                            <action selector="selectSchoolButtonPressed:" destination="VPn-Ea-qCW" eventType="touchUpInside" id="WIc-m2-MF9"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNN-1i-Igt">
-                                        <rect key="frame" x="0.0" y="140" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="210" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1a-Ww-ANx">
-                                        <rect key="frame" x="0.0" y="180.5" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="250.5" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
@@ -102,7 +110,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiT-u0-iQ8">
-                                        <rect key="frame" x="0.0" y="250.5" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="320.5" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="Back"/>
                                         <connections>
@@ -111,6 +119,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="56c-gc-A8f" firstAttribute="height" secondItem="OTV-Ld-fsm" secondAttribute="height" id="NKh-3r-KOU"/>
                                     <constraint firstItem="DiT-u0-iQ8" firstAttribute="height" secondItem="OTV-Ld-fsm" secondAttribute="height" id="RSS-v8-VFF"/>
                                     <constraint firstItem="dd4-Mb-6NL" firstAttribute="height" secondItem="OTV-Ld-fsm" secondAttribute="height" id="UTR-Sf-Nse"/>
                                     <constraint firstItem="g1a-Ww-ANx" firstAttribute="height" secondItem="OTV-Ld-fsm" secondAttribute="height" id="cfY-an-bEf"/>
@@ -127,6 +136,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="MeB-5g-h3q"/>
                     <connections>
+                        <outlet property="selectSchoolButton" destination="56c-gc-A8f" id="GST-43-kwZ"/>
                         <outlet property="studentBackButton" destination="DiT-u0-iQ8" id="kLg-wO-hkG"/>
                         <outlet property="studentEmailTextField" destination="OTV-Ld-fsm" id="hd0-J5-2oy"/>
                         <outlet property="studentErrorLabel" destination="PNN-1i-Igt" id="CnT-tm-oS0"/>
@@ -261,7 +271,7 @@
                                             <outlet property="collegeNameLabel" destination="2qU-Mw-Jx1" id="adD-TT-D8I"/>
                                             <outlet property="collegeSchoolLabel" destination="Nhq-lE-hNE" id="T3e-3f-CfJ"/>
                                             <outlet property="collegeView" destination="wnh-du-wli" id="xwl-bi-8oH"/>
-                                            <segue destination="iGL-kE-bcq" kind="show" id="rbg-iG-OWN"/>
+                                            <segue destination="iGL-kE-bcq" kind="show" identifier="ShowChat" id="rbg-iG-OWN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

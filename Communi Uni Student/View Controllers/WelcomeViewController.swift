@@ -42,6 +42,7 @@ class WelcomeViewController: UIViewController {
                     self.userDefault.set(false, forKey: "usersignedin")
                     self.userDefault.set("", forKey: "userEmail")
                     self.userDefault.set("", forKey: "userPassword")
+                    self.userDefault.set("", forKey: "userSchool")
                     self.userDefault.synchronize()
                     
                 }

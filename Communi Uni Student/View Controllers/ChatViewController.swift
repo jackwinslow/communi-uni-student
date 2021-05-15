@@ -16,8 +16,10 @@ class ContainerViewController: UIViewController {
     @IBOutlet weak var studentNameLabel: UILabel!
     @IBOutlet weak var studentChatView: UIView!
     
+    var currentUserName = ""
     var user2Name = ""
     var user2UID = ""
+    var studentSchool = ""
     let chatViewController = ChatViewController()
     
     /// Required for the `MessageInputBar` to be visible
@@ -33,8 +35,10 @@ class ContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        chatViewController.currentUserName = currentUserName
         chatViewController.user2Name = user2Name
         chatViewController.user2UID = user2UID
+        chatViewController.studentSchool = studentSchool
         
         studentNameLabel.text = user2Name
         
@@ -54,9 +58,12 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 
     var currentUser: User = Auth.auth().currentUser!
     
+    var currentUserName: String?
+    
     var user2Name: String?
     var user2ImgUrl: String?
     var user2UID: String?
+    var studentSchool = ""
     
     private var docReference: DocumentReference?
     
@@ -78,6 +85,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         messagesCollectionView.messagesDisplayDelegate = self
         
         if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
+            layout.textMessageSizeCalculator.outgoingAvatarSize = .zero
             layout.textMessageSizeCalculator.incomingAvatarSize = .zero
         }
         
@@ -86,23 +94,6 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     }
     
     // MARK: - Custom messages handlers
-    
-    func createNewChat() {
-        let users = [self.currentUser.uid, self.user2UID]
-         let data: [String: Any] = [
-             "users":users
-         ]
-         
-         let db = Firestore.firestore().collection("conversations")
-         db.addDocument(data: data) { (error) in
-             if let error = error {
-                 print("Unable to create chat! \(error)")
-                 return
-             } else {
-                 self.loadChat()
-             }
-         }
-    }
     
     func loadChat() {
         
@@ -125,7 +116,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
                 
                 if queryCount == 0 {
                     //If documents count is zero that means there is no chat available and we need to create a new instance
-                    self.createNewChat()
+                    print("*** ERROR: SHOULDN'T HAVE GOTTEN HERE")
                 }
                 else if queryCount >= 1 {
                     //Chat(s) found for currentUser
@@ -158,7 +149,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
                             return
                         } //end of if
                     } //end of for
-                    self.createNewChat()
+                    print("*** ERROR: SHOULDN'T HAVE GOTTEN HERE")
                 } else {
                     print("Let's hope this error never prints!")
                 }
@@ -203,7 +194,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
 
-        let message = Message(id: UUID().uuidString, content: text, created: Timestamp(), senderID: currentUser.uid, senderName: "User"/*currentUser.displayName!*/)
+        let message = Message(id: UUID().uuidString, content: text, created: Timestamp(), senderID: currentUser.uid, senderName: currentUserName!)
         
           //messages.append(message)
           insertNewMessage(message)
@@ -218,7 +209,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     // MARK: - MessagesDataSource
     func currentSender() -> SenderType {
         
-        return Sender(id: Auth.auth().currentUser!.uid, displayName: Auth.auth().currentUser?.displayName ?? "Name not found")
+        return Sender(id: Auth.auth().currentUser!.uid, displayName: currentUserName!)
         
     }
     
@@ -249,7 +240,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
         return isFromCurrentSender(message: message) ? UIColor(named: "PrimaryColor") as! UIColor : UIColor(named: "SecondaryColor") as! UIColor
     }
-
+    
 //    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
 //
 //        if message.sender.senderId == currentUser.uid {
@@ -270,4 +261,3 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 
     }
 }
-

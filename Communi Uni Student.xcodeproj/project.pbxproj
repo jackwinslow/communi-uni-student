@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AF4C24409478E6D74A2320DB /* Pods_Communi_Uni_Student.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC2A4FB968C9EA72F41C08D /* Pods_Communi_Uni_Student.framework */; };
 		CABD23C7264E2D2900061309 /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23C6264E2D2900061309 /* MessageListViewController.swift */; };
-		CABD23CA264E2D5F00061309 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23C9264E2D5F00061309 /* Conversation.swift */; };
 		CABD23CC264E2D6B00061309 /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23CB264E2D6B00061309 /* Conversations.swift */; };
 		CABD23CF264E2DDD00061309 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23CE264E2DDD00061309 /* Chat.swift */; };
 		CABD23D1264E2DE400061309 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABD23D0264E2DE400061309 /* Message.swift */; };
@@ -37,7 +36,6 @@
 		B4D44E1D999AF77F0879F144 /* Pods-Communi Uni Student.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Communi Uni Student.debug.xcconfig"; path = "Target Support Files/Pods-Communi Uni Student/Pods-Communi Uni Student.debug.xcconfig"; sourceTree = "<group>"; };
 		C8BAA0505A5F11D3E08B6616 /* Pods-Communi Uni Student.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Communi Uni Student.release.xcconfig"; path = "Target Support Files/Pods-Communi Uni Student/Pods-Communi Uni Student.release.xcconfig"; sourceTree = "<group>"; };
 		CABD23C6264E2D2900061309 /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
-		CABD23C9264E2D5F00061309 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		CABD23CB264E2D6B00061309 /* Conversations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversations.swift; sourceTree = "<group>"; };
 		CABD23CE264E2DDD00061309 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		CABD23D0264E2DE400061309 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			children = (
 				CABD23E1264F22D700061309 /* School.swift */,
 				CABD23E3264F22DF00061309 /* Schools.swift */,
-				CABD23C9264E2D5F00061309 /* Conversation.swift */,
 				CABD23CB264E2D6B00061309 /* Conversations.swift */,
 			);
 			path = Models;
@@ -328,7 +325,6 @@
 				CABD23E4264F22DF00061309 /* Schools.swift in Sources */,
 				CABD23D5264E2F4C00061309 /* ProfileViewController.swift in Sources */,
 				CABD23D8264E2FF500061309 /* MessageListTableViewCell.swift in Sources */,
-				CABD23CA264E2D5F00061309 /* Conversation.swift in Sources */,
 				CAEF775A264DFCBB0011C1B6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

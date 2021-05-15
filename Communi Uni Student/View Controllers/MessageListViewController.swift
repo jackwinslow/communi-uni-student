@@ -11,7 +11,7 @@ class MessageListViewController: UIViewController {
     @IBOutlet weak var studentTableView: UITableView!
     
     let userDefault = UserDefaults.standard
-    let school = UserDefaults.standard.string(forKey: "school")
+    let school = UserDefaults.standard.string(forKey: "userSchool")
     
     var conversations: Conversations!
     
@@ -24,7 +24,7 @@ class MessageListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        conversations.loadData(school: school!) {
+        conversations.loadData {
             self.studentTableView.reloadData()
         }
     }
@@ -34,8 +34,11 @@ class MessageListViewController: UIViewController {
             print("doing segue ****************************")
             let destination = segue.destination as! ContainerViewController
             let selectedIndexPath = studentTableView.indexPathForSelectedRow!
-            destination.user2Name = conversations.conversationArray[selectedIndexPath.row].firstname
-            destination.user2UID = conversations.conversationArray[selectedIndexPath.row].id
+            print(conversations.conversationArray[selectedIndexPath.row])
+            destination.currentUserName = "BOBBY STUDENT"
+            destination.user2Name = conversations.conversationArray[selectedIndexPath.row].userName
+            destination.user2UID = conversations.conversationArray[selectedIndexPath.row].userUID
+            destination.studentSchool = conversations.conversationArray[selectedIndexPath.row].studentSchool
             destination.hidesBottomBarWhenPushed = true
         }
     }
@@ -50,7 +53,7 @@ extension MessageListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = studentTableView.dequeueReusableCell(withIdentifier: "ConvCell", for: indexPath) as! MessageListTableViewCell
-        cell.collegeNameLabel.text = conversations.conversationArray[indexPath.row].firstname
+        cell.collegeNameLabel.text = conversations.conversationArray[indexPath.row].userName
         return cell
     }
     

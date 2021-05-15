@@ -79,7 +79,7 @@ class SignUpViewController: UIViewController {
     func validateFields() -> String? {
         
         // Check that all fields are filled in
-        if studentFirstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || studentLastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || studentEmailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || studentPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        if studentFirstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || studentLastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || selectSchoolButton.titleLabel?.text == "Select College/University" || studentEmailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || studentPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return "Please fill in all fields."
         }
         
@@ -171,7 +171,7 @@ class SignUpViewController: UIViewController {
             // Create cleaned versions of the data
             let firstName = studentFirstNameTextField.text!.trimmingCharacters(in:.whitespacesAndNewlines)
             let lastName = studentLastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let school = selectedButton.titleLabel?.text!
+            let school = selectedButton.titleLabel?.text
             let email = studentEmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = studentPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
@@ -188,6 +188,8 @@ class SignUpViewController: UIViewController {
                     
                     // User was created successfully, now store in firebase
                     let db = Firestore.firestore()
+                    
+                    print("********** SIGN UP SCHOOL \(school!)")
                     
                     // Save student in schools collection
                     db.collection("schools").document(school!).collection("students").document().setData(["firstname": firstName, "lastname": lastName, "school": school!, "date": Date().timeIntervalSince1970, "uid": result!.user.uid]) { error in

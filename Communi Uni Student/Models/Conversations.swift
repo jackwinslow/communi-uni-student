@@ -9,16 +9,16 @@ import Foundation
 import Firebase
 
 class Conversations {
-    var conversationArray: [Conversation] = []
+    var conversationArray: [Chat] = []
     var db: Firestore!
     
     init() {
         db = Firestore.firestore()
     }
     
-    func loadData(school: String, completed: @escaping () -> ()) {
+    func loadData(completed: @escaping () -> ()) {
         print(Auth.auth().currentUser!.uid)
-        db.collection("schools").document(school).collection("students").document(Auth.auth().currentUser!.uid).collection("conversations").addSnapshotListener { (querySnapshot, error) in
+            db.collection("conversations").whereField("users", arrayContains: Auth.auth().currentUser?.uid ?? "Not Found User 1").addSnapshotListener { (querySnapshot, error) in
             guard error == nil else {
                 print("😡 ERROR: adding the snapshot listener \(error?.localizedDescription)")
                 return completed()
@@ -26,9 +26,9 @@ class Conversations {
             self.conversationArray = [] // clean out existing conversationArray since new data will load
             // there are querySnapshot!.documents.count documents in the snapshot
             for document in querySnapshot!.documents {
-                let conversation = Conversation(dictionary: document.data())
-                conversation.documentID = document.documentID
-                self.conversationArray.append(conversation)
+                var conversation = Chat(dictionary: document.data())
+                conversation?.documentID = document.documentID
+                self.conversationArray.append(conversation!)
             }
             completed()
         }
