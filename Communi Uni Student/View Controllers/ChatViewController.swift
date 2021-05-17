@@ -84,10 +84,10 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
         
-        if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
-            layout.textMessageSizeCalculator.outgoingAvatarSize = .zero
-            layout.textMessageSizeCalculator.incomingAvatarSize = .zero
-        }
+//        if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
+//            layout.textMessageSizeCalculator.outgoingAvatarSize = .zero
+//            layout.textMessageSizeCalculator.incomingAvatarSize = .zero
+//        }
         
         loadChat()
         
@@ -232,9 +232,9 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     
     // MARK: - MessagesLayoutDelegate
     
-    func avatarSize(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGSize {
-        return .zero
-    }
+//    func avatarSize(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGSize {
+//        return .zero
+//    }
     
     // MARK: - MessagesDisplayDelegate
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
@@ -253,6 +253,20 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 //            }
 //        }
 //    }
+    
+    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+        
+        if isFromCurrentSender(message: message) {
+            
+            avatarView.isHidden = true
+            
+            if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
+                layout.textMessageSizeCalculator.outgoingAvatarSize = CGSize(width: 15, height: 10)
+                layout.textMessageSizeCalculator.incomingAvatarSize = .zero
+            }
+            
+        }
+    }
 
     func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
 

@@ -192,7 +192,7 @@ class SignUpViewController: UIViewController {
                     print("********** SIGN UP SCHOOL \(school!)")
                     
                     // Save student in schools collection
-                    db.collection("schools").document(school!).collection("students").document().setData(["firstname": firstName, "lastname": lastName, "school": school!, "date": Date().timeIntervalSince1970, "uid": result!.user.uid]) { error in
+                    db.collection("schools").document(school!).collection("students").document(Auth.auth().currentUser!.uid).setData(["firstname": firstName, "lastname": lastName, "school": school!, "date": Date().timeIntervalSince1970, "uid": result!.user.uid]) { error in
                         
                         if error != nil {
                             
