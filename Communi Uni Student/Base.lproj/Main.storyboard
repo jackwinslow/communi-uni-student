@@ -195,7 +195,7 @@
             <objects>
                 <viewController id="HU3-eR-mnY" customClass="MessageListViewController" customModule="Communi_Uni_Student" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bp7-WD-tBv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4u-uQ-5iD">
@@ -278,7 +278,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LQL-m2-JEQ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="ThirdColor"/>
                         <constraints>
                             <constraint firstItem="2pJ-Sa-6W0" firstAttribute="top" secondItem="t4u-uQ-5iD" secondAttribute="bottom" id="0r3-4L-2zS"/>
                             <constraint firstItem="LQL-m2-JEQ" firstAttribute="trailing" secondItem="t4u-uQ-5iD" secondAttribute="trailing" constant="20" id="FKd-9f-1QQ"/>
@@ -444,7 +444,7 @@
             <objects>
                 <viewController id="cEK-AU-qy9" customClass="ProfileViewController" customModule="Communi_Uni_Student" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CTO-EE-LJk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nja-tG-V3v">
@@ -598,9 +598,6 @@ Coming soon!</string>
         <namedColor name="ThirdColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

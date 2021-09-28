@@ -89,6 +89,11 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 //            layout.textMessageSizeCalculator.incomingAvatarSize = .zero
 //        }
         
+//        if let layout = messagesCollectionView.collectionViewLayout as? MessagesCollectionViewFlowLayout {
+//            layout.textMessageSizeCalculator.outgoingAvatarSize = CGSize(width: 15, height: 10)
+//            layout.textMessageSizeCalculator.incomingAvatarSize = .zero
+//        }
+        
         loadChat()
         
     }
